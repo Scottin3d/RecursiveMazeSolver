@@ -1,0 +1,154 @@
+Sun Oct 27 14:46:35 PDT 2019
+*** compiling with clang++ to create an executable called myprogram
+clang version 7.0.1 (tags/RELEASE_701/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/rh/llvm-toolset-7.0/root/usr/bin
+*** running clang-tidy using options from .clang-tidy
+LLVM (http://llvm.org/):
+  LLVM version 7.0.1
+  Optimized build.
+  Default target: x86_64-unknown-linux-gnu
+  Host CPU: broadwell
+8065 warnings generated.
+14715 warnings generated.
+22109 warnings generated.
+/home/NETID/scott117/CSS342/ass3/creature.cpp:28:4: warning: do not use 'else' after 'return' [readability-else-after-return]
+  }else{
+   ^~~~~
+/home/NETID/scott117/CSS342/ass3/creature.h:23:27: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  std::string solve(Maze &Maze);
+                          ^
+/home/NETID/scott117/CSS342/ass3/creature.h:24:41: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  bool findPath(int Row, int Col, Maze &Maze);
+                                        ^
+/home/NETID/scott117/CSS342/ass3/creature.h:26:29: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  std::string goNorth(Maze &Maze);
+                            ^
+/home/NETID/scott117/CSS342/ass3/creature.h:27:29: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  std::string goSouth(Maze &Maze);
+                            ^
+/home/NETID/scott117/CSS342/ass3/creature.h:28:28: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  std::string goEast(Maze &Maze);
+                           ^
+/home/NETID/scott117/CSS342/ass3/creature.h:29:28: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  std::string goWest(Maze &Maze);
+                           ^
+/home/NETID/scott117/CSS342/ass3/creature.h:23:27: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  std::string solve(Maze &Maze);
+                          ^
+/home/NETID/scott117/CSS342/ass3/creature.h:24:41: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  bool findPath(int Row, int Col, Maze &Maze);
+                                        ^
+/home/NETID/scott117/CSS342/ass3/creature.h:26:29: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  std::string goNorth(Maze &Maze);
+                            ^
+/home/NETID/scott117/CSS342/ass3/creature.h:27:29: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  std::string goSouth(Maze &Maze);
+                            ^
+/home/NETID/scott117/CSS342/ass3/creature.h:28:28: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  std::string goEast(Maze &Maze);
+                           ^
+/home/NETID/scott117/CSS342/ass3/creature.h:29:28: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  std::string goWest(Maze &Maze);
+                           ^
+/home/NETID/scott117/CSS342/ass3/maze.cpp:15:14: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+      Out << Maze.Field[Row][Col];
+             ^
+/home/NETID/scott117/CSS342/ass3/maze.cpp:27:1: warning: constructor does not initialize these fields: Field, Width, Height, ExitRow, ExitColumn [cppcoreguidelines-pro-type-member-init]
+Maze::Maze(const string &FileName) {
+^
+/home/NETID/scott117/CSS342/ass3/maze.cpp:40:18: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+      InFile.get(Field[Row][Col]);
+                 ^
+/home/NETID/scott117/CSS342/ass3/maze.cpp:41:20: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+      std::cout << Field[Row][Col];
+                   ^
+/home/NETID/scott117/CSS342/ass3/maze.cpp:58:11: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+  return (Field[Row][Col] == ' ');
+          ^
+/home/NETID/scott117/CSS342/ass3/maze.cpp:62:11: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+  return (Field[Row][Col] == '*');
+          ^
+/home/NETID/scott117/CSS342/ass3/maze.cpp:66:3: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+  Field[Row][Col] = '*';
+  ^
+/home/NETID/scott117/CSS342/ass3/maze.cpp:70:3: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+  Field[Row][Col] = '+';
+  ^
+Suppressed 22080 warnings (22080 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+*** running myprogram
+xxxxxxxxxxxxxxxxxx x
+x     x       xxxx x
+x xxxxx xxxxx   xx x
+x xxxxx xxxxxxx xx x
+x x          xx xx x
+x xxxxxxxxxx xx    x
+xxxxxxxxxxxxxxxxxxxx
+Path: EEENNNEEEEEESEESSSEEENNNNN
+xxxxxxxxxxxxxxxxxx x
+x     x*******xxxx*x
+x xxxxx*xxxxx***xx*x
+x xxxxx*xxxxxxx*xx*x
+x x ****     xx*xx*x
+x xxxxxxxxxx xx****x
+xxxxxxxxxxxxxxxxxxxx
+
+
+xxxxxxxxxxxxxxxxxx x
+x       x     xxxx x
+x xxx x xx xx   xx x
+x xxxxx x  xxxx xx x
+x x        xxxx xx x
+x xxxxxxxxxx       x
+xxxxxxxxxxxxxxxxxxxx
+
+Path: EEEEENENNEEESEESSSEEENNNNN
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx x
+xxx        xxxxxxxxxxxxxxxxxxx    xxxxxxxxxx            xx x
+xxx xxxxxx xxxxxxxxxxxxxxxxxxx xx xxxxxxxxxxxx xxxxxxxx    x
+xxx xxxxxx xxxxxxxxxxxxxxxxxxx xx  xxxxxxxxxxx xxxxxx     xx
+xxx xxxxxx xxxxxxxxxx     xxxx xxx  xxxxxxxxxx xxxxxxxxxxxxx
+xxx   xxxx xxxxxxxxxx xxx xxxx xxxx xxxxxxxxxx xxxxxxxxxxxxx
+xxxxxxxxxx xxxxxxxxxx xxx      xxxx xxxxx      xxxxxxxxxxxxx
+xxxxxxxxxx xxxxxxxxxx xxxxxxxxxxxxx xxxxx xxxxxxxxxxxxxxxxxx
+xxxxxxxxxx xxxxxxxxxx xxxxxxxxxxxxx xxxxx xxxxxxxxxxxxxxxxxx
+xxxx                  xxxxxxxxxxxxx  xxxx xxxxxxxxxxxxxxxxxx
+xxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxx xxxxx xxxxxxxxxxxxxxxxxx
+xxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxx       xxxxxxxxxx xxxxxxx
+xxxx xx          xxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxx
+xxxx xxxxxxxxxxx xxxx            xxxxxxxxxxxxxxxxxxx xxxxxxx
+xxxx xxxx xxxxxx xxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxx xxxxxxx
+xxxx      xxxxxx xxxxxxxxxxxxxxx                     xxxxxxx
+xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxx xxxxxxxxxxxxxx xxxxxxxxxxxx
+xxxxx                            xxxxxxxxxxxxxx xxxxxxxxxxxx
+xxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx      xxxxxxx
+xxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Path: NNEEEEEEEEEEEEEEEEEEEEEEEEEEENNNNWWWWWWWWWWWNNNNNNNNNEEEESSEEEEENNNNNEEESSESESSSSSSSEEEEEENNNNNEEEEENNNNNEEEEEEEEESEEENNE
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*x
+xxx        xxxxxxxxxxxxxxxxxxx****xxxxxxxxxx  **********xx*x
+xxx xxxxxx xxxxxxxxxxxxxxxxxxx*xx*xxxxxxxxxxxx*xxxxxxxx****x
+xxx xxxxxx xxxxxxxxxxxxxxxxxxx*xx**xxxxxxxxxxx*xxxxxx     xx
+xxx xxxxxx xxxxxxxxxx*****xxxx*xxx**xxxxxxxxxx*xxxxxxxxxxxxx
+xxx   xxxx xxxxxxxxxx*xxx*xxxx*xxxx*xxxxxxxxxx*xxxxxxxxxxxxx
+xxxxxxxxxx xxxxxxxxxx*xxx******xxxx*xxxxx******xxxxxxxxxxxxx
+xxxxxxxxxx xxxxxxxxxx*xxxxxxxxxxxxx*xxxxx*xxxxxxxxxxxxxxxxxx
+xxxxxxxxxx xxxxxxxxxx*xxxxxxxxxxxxx*xxxxx*xxxxxxxxxxxxxxxxxx
+xxxx                 *xxxxxxxxxxxxx*+xxxx*xxxxxxxxxxxxxxxxxx
+xxxx xxxxxxxxxxxxxxxx*xxxxxxxxxxxxx*xxxxx*xxxxxxxxxxxxxxxxxx
+xxxx xxxxxxxxxxxxxxxx*xxxxxxxxxxxxx*******xxxxxxxxxx xxxxxxx
+xxxx xx++++++++++xxxx*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxx
+xxxx xxxxxxxxxxx+xxxx************xxxxxxxxxxxxxxxxxxx xxxxxxx
+xxxx xxxx xxxxxx+xxxxxxxxxxxxxxx*xxxxxxxxxxxxxxxxxxx xxxxxxx
+xxxx      xxxxxx+xxxxxxxxxxxxxxx*                    xxxxxxx
+xxxxxxxxxxxxxxxx+xxxxxxxxxxxxxxx*xxxxxxxxxxxxxx xxxxxxxxxxxx
+xxxxx****************************xxxxxxxxxxxxxx xxxxxxxxxxxx
+xxxxx*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx      xxxxxxx
+xxxxx*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+Done!
+*** cleaning up, deleting myprogram
+Sun Oct 27 14:46:46 PDT 2019
